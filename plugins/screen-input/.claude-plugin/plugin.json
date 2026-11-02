@@ -1,6 +1,6 @@
 {
   "name": "screen-input",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Click, drag, scroll, type (Korean OK) and press keys inside one Windows app window, using screen-capture's coordinates, so Claude can drive a GUI it is testing.",
   "author": { "name": "zerodoc", "email": "zelodoc08@gmail.com" },
   "homepage": "https://github.com/pqowp90/zerodoc-skills",

@@ -15,7 +15,7 @@
       "name": "screen-input",
       "source": "./plugins/screen-input",
       "description": "Windows 앱 창 클릭·드래그·스크롤·키 입력(한글 OK) — screen-capture 좌표 그대로",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "category": "productivity",
       "keywords": ["windows", "click", "클릭", "입력"]
     },
