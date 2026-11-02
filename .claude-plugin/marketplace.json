@@ -18,6 +18,14 @@
       "version": "0.1.0",
       "category": "productivity",
       "keywords": ["windows", "click", "클릭", "입력"]
+    },
+    {
+      "name": "screen-ui",
+      "source": "./plugins/screen-ui",
+      "description": "Windows 앱 창을 UI Automation으로 읽고 조작 — 마우스·포커스 안 건드림 (버튼·입력칸·체크·탭·목록·스크롤)",
+      "version": "0.1.0",
+      "category": "productivity",
+      "keywords": ["windows", "ui-automation", "클릭", "입력", "headless"]
     }
   ]
 }

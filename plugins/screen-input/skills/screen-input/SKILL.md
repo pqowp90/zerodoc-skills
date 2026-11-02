@@ -53,6 +53,13 @@ X,Y are relative to the window's visible frame (top-left of a capture of that wi
   Tell the user before a long sequence, and never type secrets or click destructive buttons
   (delete, purchase, send) unless asked.
 
+## Try screen-ui first
+
+If the screen-ui skill is installed, use it for buttons, fields, checkboxes, tabs, lists and scrolling. It
+acts through UI Automation without moving the mouse or taking focus. Use screen-input for what it can't
+do: canvas content, drag, right/double click, raw key combos. Its `get` step gives an element's center
+in this skill's coordinates.
+
 ## When a browser/WebView-specific tool is better
 
 For pages in a browser or WebView2 with a debugging port, DevTools (CDP) can click by element

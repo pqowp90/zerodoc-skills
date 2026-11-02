@@ -1,0 +1,10 @@
+{
+  "name": "screen-ui",
+  "version": "0.1.0",
+  "description": "Read and operate a Windows app window through UI Automation (buttons, fields, checkboxes, tabs, lists, scroll areas) by ref, id or name, without moving the mouse or taking focus.",
+  "author": { "name": "zerodoc", "email": "zelodoc08@gmail.com" },
+  "homepage": "https://github.com/pqowp90/zerodoc-skills",
+  "repository": "https://github.com/pqowp90/zerodoc-skills",
+  "license": "MIT",
+  "keywords": ["windows", "ui-automation", "accessibility", "gui-testing", "headless"]
+}
