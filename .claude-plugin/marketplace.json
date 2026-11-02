@@ -1,0 +1,15 @@
+{
+  "name": "zerodoc-skills",
+  "owner": { "name": "zerodoc", "email": "zelodoc08@gmail.com" },
+  "metadata": { "description": "zerodocDesk 기본 스킬 모음 / Default skills for zerodocDesk" },
+  "plugins": [
+    {
+      "name": "screen-capture",
+      "source": "./plugins/screen-capture",
+      "description": "Windows 화면·모니터·영역·창 캡처 → PNG (기본 긴 변 1024px)",
+      "version": "0.1.0",
+      "category": "productivity",
+      "keywords": ["windows", "screenshot", "캡처"]
+    }
+  ]
+}

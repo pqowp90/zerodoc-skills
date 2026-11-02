@@ -1,0 +1,10 @@
+{
+  "name": "screen-capture",
+  "version": "0.1.0",
+  "description": "Capture the Windows desktop, a monitor, a region, or a single app window into a PNG (long side 1024px by default) so Claude can see the screen.",
+  "author": { "name": "zerodoc", "email": "zelodoc08@gmail.com" },
+  "homepage": "https://github.com/pqowp90/zerodoc-skills",
+  "repository": "https://github.com/pqowp90/zerodoc-skills",
+  "license": "MIT",
+  "keywords": ["windows", "screenshot", "screen-capture"]
+}
