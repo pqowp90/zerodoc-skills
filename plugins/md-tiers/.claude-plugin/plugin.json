@@ -1,6 +1,6 @@
 {
   "name": "md-tiers",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Claude manages this project's markdown files in three tiers: locked instructions (CLAUDE.md, skills, settings, hooks, memory: edits ask you first), free low-priority know-how (promoted to instructions once it proves useful), and per-task work notes (commit notes, things to verify by hand). All per project, with a contamination cleanup on first use.",
   "author": {
     "name": "zerodoc",
