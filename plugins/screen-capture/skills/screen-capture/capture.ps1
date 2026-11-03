@@ -320,6 +320,13 @@ if ($small) { $bmp.Dispose(); $bmp = $small }
 if (-not $Out) {
     $dir = Join-Path $env:TEMP 'claude-captures'
     $Out = Join-Path $dir ("cap_{0:yyyyMMdd_HHmmss_fff}.png" -f (Get-Date))
+    # Default folder only: drop our own captures older than 3 days. -Out paths are never touched.
+    if (Test-Path $dir) {
+        $cutoff = (Get-Date).AddDays(-3)
+        Get-ChildItem -LiteralPath $dir -Filter 'cap_*.png' -File -ErrorAction SilentlyContinue |
+            Where-Object { $_.LastWriteTime -lt $cutoff } |
+            Remove-Item -Force -ErrorAction SilentlyContinue
+    }
 }
 $Out = [System.IO.Path]::GetFullPath($Out)
 $outDir = Split-Path $Out -Parent

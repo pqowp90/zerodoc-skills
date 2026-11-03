@@ -35,7 +35,7 @@ powershell -NoProfile -ExecutionPolicy Bypass -File "${CLAUDE_SKILL_DIR}/capture
 
 ## Options
 
-- `-Out path.png` — default `%TEMP%\claude-captures\cap_<timestamp>.png`. `.jpg`/`.bmp` also accepted.
+- `-Out path.png` — default `%TEMP%\claude-captures\cap_<timestamp>.png`, kept 3 days and then auto-deleted. Use `-Out` for anything that must stay. `.jpg`/`.bmp` also accepted.
 - `-MaxSize 1024` (default) — downscales the longest edge to save vision tokens (≈ w×h/750 tokens: 1024x576 ≈ 790 vs native 1920x1080 ≈ 2,760). Tested: normal 100%-scale Windows UI text, incl. Korean, stays readable at 1024 on a 1920 screen.
   - Text too small / unsure what it says? Do NOT recapture the whole screen bigger. Capture just that window or `-Region` — a small area at native size costs fewer tokens and is sharper.
   - Use `-MaxSize 0` for native pixels when checking alignment, 1px borders, colours or text crispness.
@@ -66,4 +66,4 @@ powershell -NoProfile -ExecutionPolicy Bypass -File "${CLAUDE_SKILL_DIR}/capture
 ... capture.ps1 -Window MyApp -MaxSize 0 -Out .\screenshots\main.png
 ```
 
-Delete `%TEMP%\claude-captures` contents freely; nothing else depends on them.
+Each capture into the default folder first deletes its `cap_*.png` files older than 3 days; `-Out` files are never touched. Delete `%TEMP%\claude-captures` contents freely; nothing else depends on them.
