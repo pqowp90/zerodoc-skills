@@ -1,0 +1,21 @@
+{
+  "name": "md-tiers",
+  "version": "0.1.0",
+  "description": "Claude manages this project's markdown files in three tiers: locked instructions (CLAUDE.md, skills, settings, hooks, memory: edits ask you first), free low-priority know-how (promoted to instructions once it proves useful), and per-task work notes (commit notes, things to verify by hand). All per project, with a contamination cleanup on first use.",
+  "author": {
+    "name": "zerodoc",
+    "email": "zelodoc08@gmail.com"
+  },
+  "homepage": "https://github.com/pqowp90/zerodoc-skills",
+  "repository": "https://github.com/pqowp90/zerodoc-skills",
+  "license": "MIT",
+  "keywords": [
+    "claude-md",
+    "memory",
+    "notes",
+    "commit",
+    "know-how",
+    "cleanup",
+    "hooks"
+  ]
+}
