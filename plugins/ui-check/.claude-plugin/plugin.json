@@ -1,0 +1,11 @@
+{
+  "name": "ui-check",
+  "version": "0.1.0",
+  "description": "Fix GUI problems by looking, not guessing: build, run a separate test copy, screenshot, operate it, fix, then screenshot again before reporting. Installs screen-capture, screen-ui and screen-input with it.",
+  "author": { "name": "zerodoc", "email": "zelodoc08@gmail.com" },
+  "homepage": "https://github.com/pqowp90/zerodoc-skills",
+  "repository": "https://github.com/pqowp90/zerodoc-skills",
+  "license": "MIT",
+  "keywords": ["windows", "gui-testing", "screenshot", "ui", "verify"],
+  "dependencies": ["screen-capture", "screen-ui", "screen-input"]
+}

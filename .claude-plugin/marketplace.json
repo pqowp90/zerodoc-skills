@@ -26,6 +26,14 @@
       "version": "0.1.0",
       "category": "productivity",
       "keywords": ["windows", "ui-automation", "클릭", "입력", "headless"]
+    },
+    {
+      "name": "ui-check",
+      "source": "./plugins/ui-check",
+      "description": "UI 문제는 코드로 추측하지 않고 빌드→테스트 실행→스크린샷→조작→수정→재확인 (screen-capture·screen-ui·screen-input 같이 설치)",
+      "version": "0.1.0",
+      "category": "productivity",
+      "keywords": ["windows", "ui", "스크린샷", "확인", "테스트"]
     }
   ]
 }
