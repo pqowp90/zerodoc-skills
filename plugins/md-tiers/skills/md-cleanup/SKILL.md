@@ -40,8 +40,8 @@ User-level preferences (language, tone) in `~/.claude/` are not contamination: l
 
 ## 4. Apply, then report (don't ask)
 
-"md 정리해" is the go-ahead. Don't stop to ask; every 🔒 edit is backed up by the guard hook (`.claude/md-tiers/backup/`), so a change the user dislikes is one copy away.
-1. Apply the fixes. Moving a tip: new file in `.claude/knowhow/` with the know-how format (`title`, `uses`, `last`), then remove it from the old place. Keep `MEMORY.md` in sync when a memory file changes or goes away. Before removing a file that has no backup (outside the project, untracked), copy it into the backup folder first.
+"md 정리해" is the go-ahead. Don't stop to ask. Files in git can be restored from git; for anything else you change or remove (memory, files under `~/.claude`), copy it into `.claude/md-tiers/backup/` first.
+1. Apply the fixes. Moving a tip: new file in `.claude/knowhow/` with the know-how format (`title`, `uses`, `last`), then remove it from the old place. Keep `MEMORY.md` in sync when a memory file changes or goes away.
 2. Don't apply what needs the user's judgment (a contradiction, deleting something that might still matter): leave it and list it under "결정 필요".
 3. Write `.claude/md-tiers.json` as `{ "cleanup": "<today>" }` and add `.claude/md-tiers.json`, `.claude/knowhow/` and `.claude/md-tiers/` to `.git/info/exclude` unless already ignored. This stops the session-start reminder for 30 days.
-4. Report one table: 파일 / 문제 / 바꾼 내용 (짧게), grouped by file; what stays as is in one line; then "결정 필요" items, and the backup folder path.
+4. Report one table: 파일 / 문제 / 바꾼 내용 (짧게), grouped by file; what stays as is in one line; then "결정 필요" items, and the backup folder path if anything went there.

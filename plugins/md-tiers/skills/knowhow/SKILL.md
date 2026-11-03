@@ -38,7 +38,7 @@ last: 2026-11-03         # last day it helped
 
 ## Promoting (⬆, uses ≥ 3)
 
-Don't ask. End the report with one line, `⬆ 승격 후보: <title> → <where it would go>` (this project's CLAUDE.md, a skill, or memory). When the user says to promote ("승격해", "올려"), write it there (a 🔒 edit: the guard hook backs it up, and the report names the file), then delete the know-how file.
+Don't ask. End the report with one line, `⬆ 승격 후보: <title> → <where it would go>` (this project's CLAUDE.md, a skill, or memory). When the user says to promote ("승격해", "올려"), write it there and name the file in the report, then delete the know-how file.
 
 ## Showing / tidying ("노하우 보여줘", "노하우 정리해")
 
