@@ -1,14 +1,29 @@
 // PreToolUse hook: instruction files are the user's, not Claude's.
 // Any edit to one (CLAUDE.md, skills, agents, commands, rules, settings, hooks, memory), or turning
 // this plugin off, stops and asks the user, even in auto mode. Reads are never blocked.
-// Know-how (~/.claude/knowhow/) and work notes (.claude/commit-notes/, .claude/verify-todo/) stay free.
+// Know-how (.claude/knowhow/) and work notes (.claude/commit-notes/, .claude/verify-todo/) stay free.
+// One approval per user message: once a locked edit has really run (PostToolUse), later ones in the
+// same message pass. A denied edit never runs, so the next try asks again.
+//   node protect.js        PreToolUse
+//   node protect.js post   PostToolUse (records the approval)
+//   node protect.js turn   UserPromptSubmit (starts a new message)
 const fs = require('fs');
 const os = require('os');
+const path = require('path');
+
+const mode = process.argv[2] || 'pre';
 
 let input = {};
 try { input = JSON.parse(fs.readFileSync(0, 'utf8') || '{}'); } catch { process.exit(0); }
 const tool = input.tool_name || '';
 const ti = input.tool_input || {};
+
+// Per-session state in the temp folder: { turn, approved } (approved = turn whose locked edit ran).
+const stateFile = path.join(os.tmpdir(), 'md-tiers-' + String(input.session_id || 'none').replace(/[^\w-]/g, '') + '.json');
+function readState() { try { return JSON.parse(fs.readFileSync(stateFile, 'utf8')); } catch { return {}; } }
+function writeState(st) { try { fs.writeFileSync(stateFile, JSON.stringify(st)); } catch {} }
+
+if (mode === 'turn') { writeState({ turn: Date.now() }); process.exit(0); }
 
 const home = os.homedir().replace(/\\/g, '/').toLowerCase();
 
@@ -36,6 +51,9 @@ function lockedLabel(path) {
 }
 
 function ask(label, what) {
+  const st = readState();
+  if (mode === 'post') { writeState({ ...st, approved: st.turn || 0 }); process.exit(0); }
+  if (st.approved !== undefined && st.approved === (st.turn || 0)) process.exit(0); // approved earlier in this message
   process.stdout.write(JSON.stringify({
     hookSpecificOutput: {
       hookEventName: 'PreToolUse',

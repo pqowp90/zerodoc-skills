@@ -18,7 +18,7 @@ The first session after installing asks to run **md-cleanup**: it reads the proj
 
 - **Hooks**
   - SessionStart: prints the tier rules, this project's know-how titles, and a cleanup reminder when due.
-  - PreToolUse: asks before Edit/Write or a shell write to a 🔒 file, or before `claude plugin disable/uninstall`. Reads are never blocked. Shell commands are matched by pattern, so a write hidden inside a script file is not caught.
+  - PreToolUse: asks before Edit/Write or a shell write to a 🔒 file, or before `claude plugin disable/uninstall`, **once per message**: after you approve one and it runs, the rest of that request goes through. A denied edit keeps asking. Reads are never blocked. Shell commands are matched by pattern, so a write hidden inside a script file is not caught.
 - **Skills**
   - `md-cleanup`: the contamination check described above.
   - `commit-notes`: per-task commit notes, and "커밋해" commits from them after checking the diff.
