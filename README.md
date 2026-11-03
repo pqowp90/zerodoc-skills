@@ -27,7 +27,7 @@ claude plugin install screen-capture@zerodoc-skills --scope local    # 이 프�
 | Plugin | What it does | Platform |
 |---|---|---|
 | `screen-capture` | Captures the whole desktop, one monitor, a region, or a single app window (by process name, title, PID or HWND) into a PNG that Claude then reads. Long side is scaled to 1024px by default to save tokens. | Windows (PowerShell 5.1+) |
-| `screen-input` | Clicks, drags, scrolls, types text (Korean OK) and presses key combos inside one app window, using screen-capture's coordinates. Checks the window is in front and not covered before every step. | Windows (PowerShell 5.1+) |
+| `screen-input` | Real mouse and keyboard input into one app window at screen-capture's coordinates: drag, right/double click, hover, raw key combos, typing into terminals or canvas (Korean OK). It takes the mouse and focus while it runs, so use `screen-ui` first for buttons and fields. Checks the window is in front and not covered before every step. | Windows (PowerShell 5.1+) |
 | `screen-ui` | Reads a window's UI Automation tree as a list of actionable elements with refs, then clicks, sets text, toggles, selects, expands and scrolls them by ref, id or name. It never moves the mouse or takes focus, and works on windows behind others (WebView2/Electron, WinUI, WPF, WinForms, Win32). | Windows (PowerShell 5.1+) |
 
 ## Adding a skill / 스킬 추가

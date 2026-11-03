@@ -1,7 +1,7 @@
 {
   "name": "screen-input",
-  "version": "0.1.1",
-  "description": "Click, drag, scroll, type (Korean OK) and press keys inside one Windows app window, using screen-capture's coordinates, so Claude can drive a GUI it is testing.",
+  "version": "0.1.2",
+  "description": "Real mouse and keyboard input (drag, right/double click, raw keys, typing into terminals or canvas) for one Windows app window at screen-capture's coordinates. Takes the mouse and focus while it runs; prefer screen-ui for buttons and fields.",
   "author": { "name": "zerodoc", "email": "zelodoc08@gmail.com" },
   "homepage": "https://github.com/pqowp90/zerodoc-skills",
   "repository": "https://github.com/pqowp90/zerodoc-skills",

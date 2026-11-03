@@ -1,6 +1,6 @@
 ---
 name: screen-input
-description: Click, double-click, right-click, drag, scroll, type text (Korean OK) and press key combos inside one Windows app window (by process name, title, PID or HWND), using the same coordinates as a screen-capture screenshot of that window. Use to DRIVE a GUI you are testing — open a menu or panel, press a button, fill a field — then look at the result with screen-capture. Also when the user says "클릭해", "눌러 봐", "입력해 봐", "click", "type into". Windows only; no build step.
+description: Real mouse and keyboard input (SendInput) into one Windows app window (by process name, title, PID or HWND) at screen-capture coordinates — drag, right/double click, hover, scroll, raw key combos, and typing where there is no text field (terminals, canvas, games). It brings the window to the front and moves the user's mouse while it runs. When screen-ui is installed, use screen-ui instead for buttons, fields, checkboxes, tabs, lists and scrolling, and come here only for what screen-ui can't do or to test the real input path (IME, hit-testing, focus). Without screen-ui, use it to click and type too. Windows only; no build step.
 ---
 
 # screen-input
