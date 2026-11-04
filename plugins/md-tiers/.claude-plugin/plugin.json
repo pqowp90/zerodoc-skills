@@ -1,7 +1,7 @@
 {
   "name": "md-tiers",
-  "version": "0.3.0",
-  "description": "Claude manages this project's markdown files in three tiers: instructions (CLAUDE.md, skills, settings, hooks, memory: changed only when asked or when the code they describe changes), free low-priority know-how (promoted to instructions once it proves useful), and per-task work notes (commit notes, things to verify by hand). All per project, with a contamination cleanup on first use.",
+  "version": "0.4.0",
+  "description": "Claude manages this project's markdown files in three tiers: instructions (CLAUDE.md, skills, settings, hooks, memory: changed only when asked or when the code they describe changes; usage of the project's own scripts is written there so their bodies are never re-read), free low-priority know-how (promoted to instructions once it proves useful), and per-task work notes (commit notes, things to verify by hand). All per project, with a contamination cleanup on first use.",
   "author": {
     "name": "zerodoc",
     "email": "zelodoc08@gmail.com"

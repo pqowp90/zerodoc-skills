@@ -4,7 +4,7 @@ Keeps the markdown files Claude reads and writes from drifting. Claude tends to 
 
 | Tier | Files (all inside the project) | Who edits |
 |---|---|---|
-| 🔒 Instructions | `CLAUDE.md`, `.claude/skills·agents·commands·rules/`, settings, hooks, this project's memory | When you ask, or when the work changes the code an instruction describes. Each change is named in the report with its reason. |
+| 🔒 Instructions | `CLAUDE.md`, `.claude/skills·agents·commands·rules/`, settings, hooks, this project's memory | When you ask, when the work changes the code an instruction describes, or to write down how to use the project's own scripts (call, arguments, output), so later sessions use that and never re-read a script body. Each change is named in the report with its reason. |
 | 💡 Know-how | `.claude/knowhow/<slug>.md` | Claude, freely. Low priority: instructions win. A tip used 3 times shows up as "⬆ 승격 후보" at the end of a report; say "승격해" to move it into instructions. |
 | ✏️ Work notes | `.claude/commit-notes/<task>.md`, `.claude/verify-todo/<task>.md` | Claude, once at the end of a task, only that task's file (safe with several chats on one tree). |
 
@@ -12,7 +12,7 @@ Everything belongs to the project; nothing is shared between projects. Only thin
 
 Say **"md 정리해"** to run md-cleanup: it reads the project's CLAUDE.md, skills, memory and notes, checks each claim against the code, fixes stale state, guesses, quoted moods, duplicates, tricks that belong in know-how and project content that leaked into `~/.claude`, and reports a table. Things that need your call (contradictions) are listed, not changed. A project that was never cleaned, or not for 30 days, gets a one-line reminder at the end of a report.
 
-플러그인을 켠 프로젝트부터 Claude가 md 파일을 세 등급으로 관리합니다. 중간에 묻지 않고, 하고 나서 보고합니다. 지침(🔒)은 요청받았거나 코드가 바뀌어 맞출 때만 고치고 보고에 적으며, 노하우(💡)는 자유롭게 쌓이다가 3번 쓰이면 보고 끝에 승격 후보로 뜨고, 작업 노트(✏️)는 작업마다 파일 하나로 남습니다. 모두 그 프로젝트에 붙고, "md 정리해"로 오염 정리를 합니다.
+플러그인을 켠 프로젝트부터 Claude가 md 파일을 세 등급으로 관리합니다. 중간에 묻지 않고, 하고 나서 보고합니다. 지침(🔒)은 요청받았거나 코드가 바뀌어 맞출 때만 고치고 보고에 적으며(프로젝트 스크립트의 사용법은 지침에 적어 두고, 다음부터는 스크립트 본문 대신 그걸 읽습니다), 노하우(💡)는 자유롭게 쌓이다가 3번 쓰이면 보고 끝에 승격 후보로 뜨고, 작업 노트(✏️)는 작업마다 파일 하나로 남습니다. 모두 그 프로젝트에 붙고, "md 정리해"로 오염 정리를 합니다.
 
 ## What's inside
 

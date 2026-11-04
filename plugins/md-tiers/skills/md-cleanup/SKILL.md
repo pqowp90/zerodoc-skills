@@ -12,6 +12,7 @@ Answer in the user's language.
 ## 1. Read everything (read only)
 
 - 🔒 This project: `CLAUDE.md`, `CLAUDE.local.md` and nested `CLAUDE.md` files; `.claude/skills|agents|commands|rules/`; `.claude/settings*.json`; this project's memory folder `~/.claude/projects/<project path with \ / : replaced by ->/memory/` (`MEMORY.md` and every file).
+- 📜 The project's own scripts and tools (`scripts/`, `tools/`, `bin/`, `package.json` scripts and the like): list them and read only each one's usage header, to compare with what the instructions say.
 - 🔒 Outside the project, only to find project-specific content that leaked there: `~/.claude/CLAUDE.md`, `~/.claude/skills|agents|commands/`, `~/.claude/settings.json`.
 - 💡 `.claude/knowhow/`, plus the old global `~/.claude/knowhow/` if it exists.
 - ✏️ `.claude/commit-notes/`, `.claude/verify-todo/`, old single files `.claude/commit-notes.md` and `.claude/verify-todo.md`.
@@ -30,7 +31,9 @@ For every path, command, file name, flag or version a line mentions, check it st
 | Stale | a path, command or name that no longer exists | fix to the current one or delete |
 | Duplicate | the same rule in memory and CLAUDE.md, or a skill's steps copied into memory | keep one, in the right tier |
 | Contradiction | two instructions that disagree | leave both, list under "결정 필요" |
-| Wrong tier, down | a practical trick in 🔒 memory/CLAUDE.md (how to run X, a workaround) | move to 💡 `.claude/knowhow/` |
+| Wrong tier, down | a workaround or trick in 🔒 memory/CLAUDE.md ("if X fails, do Y") | move to 💡 `.claude/knowhow/` |
+| Missing script usage | a project script the instructions don't mention, or only name; a line that says "see the file" / "see the top of the script" instead of giving the usage | read the script once and write its usage into 🔒 instructions where it is mentioned (call, arguments, output, when to use it), so later sessions never read the script body. Usage of the project's own scripts is an instruction, not a tip |
+| Stale script usage | arguments, output or behavior in the instructions that no longer match the script | fix the instructions to match the script |
 | Wrong tier, up | a 💡 tip with `uses` ≥ 3 | offer promotion to 🔒 |
 | Wrong place | project-specific content in `~/.claude/...` | move into this project |
 | Log in a to-do | "확인됨 …" paragraphs in verify-todo, notes for files already committed | trim to what is left, delete finished notes |
