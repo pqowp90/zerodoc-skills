@@ -42,6 +42,14 @@
       "version": "0.4.0",
       "category": "productivity",
       "keywords": ["claude-md", "memory", "메모", "커밋", "노하우", "지침", "정리"]
+    },
+    {
+      "name": "subagent-model",
+      "source": "./plugins/subagent-model",
+      "description": "서브 에이전트 모델을 호출마다 골라 메인 모델(Opus high 등)을 그대로 물려받지 않게 — 넓은 찾기는 haiku, 사용법·흐름 파악은 sonnet, 원인 추적·리뷰는 메인 모델, 파일 몇 개면 직접 읽기",
+      "version": "0.1.0",
+      "category": "productivity",
+      "keywords": ["subagent", "model", "서브 에이전트", "모델", "비용"]
     }
   ]
 }

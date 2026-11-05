@@ -1,0 +1,10 @@
+{
+  "name": "subagent-model",
+  "version": "0.1.0",
+  "description": "Pick a subagent's model per call instead of inheriting the main one: haiku for wide searches, sonnet for usage and flow analysis, the main model for root causes and reviews. A few files: read them yourself.",
+  "author": { "name": "zerodoc", "email": "zelodoc08@gmail.com" },
+  "homepage": "https://github.com/pqowp90/zerodoc-skills",
+  "repository": "https://github.com/pqowp90/zerodoc-skills",
+  "license": "MIT",
+  "keywords": ["subagent", "model", "cost", "haiku", "sonnet"]
+}
