@@ -21,6 +21,7 @@ powershell -NoProfile -ExecutionPolicy Bypass -File "${CLAUDE_SKILL_DIR}/capture
 2. Capture. The last stdout line is machine-readable:
    `CAPTURED: <abs path> | <w>x<h> [(native WxH)] | <PrintWindow|ScreenCopy> | <source>`
 3. `Read` the path to actually look at the image. Do not claim what the UI looks like without doing this.
+   Always pass `offset: 1` with it: hooks that cap Read by file size (e.g. context-mode's "over the one-read limit") block a plain Read of a PNG, but let a Read with offset/limit through, and an image ignores the offset.
 
 ## Targets (pick one)
 

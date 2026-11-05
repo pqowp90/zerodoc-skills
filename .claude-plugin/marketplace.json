@@ -7,7 +7,7 @@
       "name": "screen-capture",
       "source": "./plugins/screen-capture",
       "description": "Windows 화면·모니터·영역·창 캡처 → PNG (기본 긴 변 1024px, 기본 폴더 캡처는 3일 뒤 자동 삭제)",
-      "version": "0.1.1",
+      "version": "0.1.2",
       "category": "productivity",
       "keywords": ["windows", "screenshot", "캡처"]
     },
