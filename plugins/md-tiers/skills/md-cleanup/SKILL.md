@@ -15,7 +15,7 @@ Answer in the user's language.
 - 📜 The project's own scripts and tools (`scripts/`, `tools/`, `bin/`, `package.json` scripts and the like): list them and read only each one's usage header, to compare with what the instructions say.
 - 🔒 Outside the project, only to find project-specific content that leaked there: `~/.claude/CLAUDE.md`, `~/.claude/skills|agents|commands/`, `~/.claude/settings.json`.
 - 💡 `.claude/knowhow/`, plus the old global `~/.claude/knowhow/` if it exists.
-- ✏️ `.claude/commit-notes/`, `.claude/verify-todo/`, old single files `.claude/commit-notes.md` and `.claude/verify-todo.md`.
+- Leftovers of older md-tiers versions: `.claude/commit-notes/`, `.claude/verify-todo/`, `.claude/commit-notes.md`, `.claude/verify-todo.md`. These are no longer used: delete them (list in the report what unchecked items they still had).
 
 ## 2. Check facts before judging
 
@@ -36,7 +36,6 @@ For every path, command, file name, flag or version a line mentions, check it st
 | Stale script usage | arguments, output or behavior in the instructions that no longer match the script | fix the instructions to match the script |
 | Wrong tier, up | a 💡 tip with `uses` ≥ 3 | offer promotion to 🔒 |
 | Wrong place | project-specific content in `~/.claude/...` | move into this project |
-| Log in a to-do | "확인됨 …" paragraphs in verify-todo, notes for files already committed | trim to what is left, delete finished notes |
 | Old layout | single-file notes, tips in `~/.claude/knowhow/` | split into per-task / per-project files |
 
 User-level preferences (language, tone) in `~/.claude/` are not contamination: leave them. A copy of one inside project memory is a duplicate.
